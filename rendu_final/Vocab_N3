@@ -1,0 +1,174 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdfs:CV a rdfs:Class .
+
+rdfs:CompetencesContent a rdfs:Class ;
+    rdfs:label "Contenu des compétences" ;
+    rdfs:subClassOf rdfs:ContentCV .
+
+rdfs:ContentCV a rdfs:Class ;
+    rdfs:label "Contenu" .
+
+rdfs:Coordonnees a rdfs:Class ;
+    rdfs:label "Coordonnes" ;
+    rdfs:subClassOf rdfs:Part .
+
+rdfs:CoordonneesContent a rdfs:Class ;
+    rdfs:label "Contenu de la partie coordonnées" ;
+    rdfs:subClassOf rdfs:ContentCV .
+
+rdfs:CoursADomicile a rdfs:Class .
+
+rdfs:Ecole a rdfs:Class ;
+    rdfs:label "Ecole" ;
+    rdfs:comment "Etablissement d'étude post-bac" ;
+    rdfs:subClassOf rdfs:Etablissement .
+
+rdfs:Etablissement a rdfs:Class ;
+    rdfs:label "Etablissement" .
+
+rdfs:Experience a rdfs:Class ;
+    rdfs:label "Experience" ;
+    rdfs:subClassOf rdfs:Part .
+
+rdfs:ExperienceContent a rdfs:Class ;
+    rdfs:label "Contenu de l'expérience" ;
+    rdfs:subClassOf rdfs:ContentCV .
+
+rdfs:Filiere a rdfs:Class ;
+    rdfs:label "Filiere" ;
+    rdfs:comment "Orientation générale, informatique, electronique..." .
+
+rdfs:Formation a rdfs:Class ;
+    rdfs:label "Formation" ;
+    rdfs:subClassOf rdfs:Part .
+
+rdfs:FormationContent a rdfs:Class ;
+    rdfs:label "Contenu de la formation" ;
+    rdfs:subClassOf rdfs:ContentCV .
+
+rdfs:Language a rdfs:Class ;
+    rdfs:label "Langage" .
+
+rdfs:Langue a rdfs:Class ;
+    rdfs:label "Langue" .
+
+rdfs:OS a rdfs:Class ;
+    rdfs:label "OS" ;
+    rdfs:comment "Système d'exploitation" .
+
+rdfs:Part a rdfs:Class .
+
+rdfs:Pays a rdfs:Class ;
+    rdfs:label "Pays" .
+
+rdfs:Ville a rdfs:Class ;
+    rdfs:label "Ville" .
+
+rdfs:option a rdfs:Class ;
+    rdfs:label "Option" ;
+    rdfs:comment "Orientation plus spécifique à l'intérieur d'une filière" .
+
+rdfs:phase a rdfs:Class ;
+    rdfs:label "Phase" .
+
+rdfs:ProgrammationDev a rdf:Property ;
+    rdfs:domain rdfs:CompetencesContent ;
+    rdfs:range rdfs:Language .
+
+rdfs:ProgrammationWeb a rdf:Property ;
+    rdfs:domain rdfs:CompetencesContent ;
+    rdfs:range rdfs:Language .
+
+rdfs:date-ends a rdf:Property ;
+    rdfs:domain rdfs:Experience,
+        rdfs:Formation ;
+    rdfs:range rdfs:Literal .
+
+rdfs:date-start a rdf:Property ;
+    rdfs:domain rdfs:Experience,
+        rdfs:Formation ;
+    rdfs:range rdfs:Literal .
+
+rdfs:formation a rdf:Property ;
+    rdfs:domain rdfs:Personne ;
+    rdfs:range rdfs:FormationContent .
+
+rdfs:hasCV a rdf:Property ;
+    rdfs:domain <http://xmlns.com/foaf/0.1/Personne> ;
+    rdfs:range rdfs:CV .
+
+rdfs:hasContent a rdf:Property ;
+    rdfs:domain rdfs:Part ;
+    rdfs:range rdfs:ContentCV .
+
+rdfs:hasCoordonnees a rdf:Property ;
+    rdfs:domain rdfs:Personne ;
+    rdfs:range rdfs:Coordonnees .
+
+rdfs:hasEtablissement a rdf:Property ;
+    rdfs:domain rdfs:Formation ;
+    rdfs:range rdfs:Etablissement .
+
+rdfs:hasFiliere a rdf:Property ;
+    rdfs:domain rdfs:Formation,
+        rdfs:phase ;
+    rdfs:range rdfs:Filiere .
+
+rdfs:hasItem a rdf:Property ;
+    rdfs:domain rdfs:ExperienceContent,
+        rdfs:FormationContent ;
+    rdfs:range rdfs:Experience,
+        rdfs:Formation .
+
+rdfs:hasLangue a rdf:Property ;
+    rdfs:domain rdfs:CompetencesContent ;
+    rdfs:range rdfs:Langue .
+
+rdfs:hasName a rdf:Property ;
+    rdfs:domain rdfs:Formation,
+        rdfs:Language,
+        rdfs:Langue,
+        rdfs:OS,
+        rdfs:Part,
+        rdfs:Pays,
+        rdfs:Ville,
+        rdfs:option,
+        rdfs:phase ;
+    rdfs:range rdfs:Literal .
+
+rdfs:hasOS a rdf:Property ;
+    rdfs:domain rdfs:CompetencesContent ;
+    rdfs:range rdfs:OS .
+
+rdfs:hasOption a rdf:Property ;
+    rdfs:domain rdfs:Formation,
+        rdfs:phase ;
+    rdfs:range rdfs:option .
+
+rdfs:hasPart a rdf:Property ;
+    rdfs:domain rdfs:CV ;
+    rdfs:range rdfs:Part .
+
+rdfs:hasPays a rdf:Property ;
+    rdfs:domain rdfs:Ville ;
+    rdfs:range rdfs:Pays .
+
+rdfs:hasPhase a rdf:Property ;
+    rdfs:domain rdfs:Etablissement ;
+    rdfs:range rdfs:phase .
+
+rdfs:lieu a rdf:Property ;
+    rdfs:domain rdfs:Experience ;
+    rdfs:range rdfs:Ville .
+
+rdfs:niveau a rdf:Property ;
+    rdfs:domain rdfs:Experience ;
+    rdfs:range rdfs:Etablissement .
+
+rdfs:teached a rdf:Property ;
+    rdfs:domain rdfs:Personne ;
+    rdfs:range rdfs:CoursADomicile .

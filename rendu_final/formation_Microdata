@@ -1,0 +1,77 @@
+<div>
+  <div itemtype="http://TD.rdfs/Ecole" itemid="http://www.w3.org/2000/01/rdf-schema#Polytech" itemscope>
+    <div itemprop="hasPhase" itemtype="http://www.w3.org/2000/01/phase" itemid="http://www.w3.org/2000/01/rdf-schema#CyclePreparatoire" itemscope>
+      <meta itemprop="http://TD.rdfs/hasName" content="
+               Cycle Preparatoire
+            " />
+    </div>
+    <link itemprop="http://schema.org/additionalType" href="http://www.w3.org/2000/01/Etablissement" />
+    <div itemprop="hasPhase" itemtype="http://www.w3.org/2000/01/phase" itemid="http://www.w3.org/2000/01/rdf-schema#CycleIngenieur" itemscope>
+      <meta itemprop="http://TD.rdfs/hasName" content="
+               Cycle Ingénieur
+            " />
+      <div itemprop="http://TD.rdfs/hasFiliere" itemtype="http://www.w3.org/2000/01/Filiere" itemid="http://www.w3.org/2000/01/rdf-schema#SI" itemscope>
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#IMAFA" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#AL" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#CASPAR" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#GMD" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#IHM" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#IAM" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#WEB" />
+        <meta itemprop="http://TD.rdfs/hasName" content="
+                     SI
+                  " />
+      </div>
+      <div itemprop="http://TD.rdfs/hasFiliere" itemtype="http://www.w3.org/2000/01/Filiere" itemid="http://www.w3.org/2000/01/rdf-schema#MAM" itemscope>
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#IMAFA" />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#GMD" />
+        <meta itemprop="http://TD.rdfs/hasName" content="
+                        MAM
+                     " />
+        <link itemprop="http://TD.rdfs/hasOption" href="http://www.w3.org/2000/01/rdf-schema#INUM" />
+      </div>
+    </div>
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#IHM" itemscope>
+    <meta itemprop="http://TD.rdfs/hasName" content="
+                           IHM
+                        " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#CASPAR" itemscope>
+    <meta itemprop="http://TD.rdfs/hasName" content="
+                           CASPAR
+                        " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#WEB" itemscope>
+    <meta itemprop="http://TD.rdfs/hasName" content="
+                           WEB
+                        " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/rdf-schema#Resource" itemid="http://www.w3.org/2000/01/rdf-schema#INUM" itemscope>
+    <meta itemprop="http://TD.rdfs/hasName" content="
+                           INUM
+                        " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#GMD" itemscope>
+    <meta itemprop="http://TD.rdfs/name" content="
+         GMD
+      " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#AL" itemscope>
+    <meta itemprop="http://TD.rdfs/hasName" content="
+                           AL
+                        " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#IMAFA" itemscope>
+    <meta itemprop="http://TD.rdfs/name" content="
+         IMAFA
+      " />
+  </div>
+  <div itemtype="http://www.w3.org/2000/01/option" itemid="http://www.w3.org/2000/01/rdf-schema#IAM" itemscope>
+    <meta itemprop="http://TD.rdfs/hasName" content="
+                           IAM
+                        " />
+  </div>
+</div>
+
+

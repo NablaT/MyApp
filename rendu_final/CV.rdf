@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+   <!ENTITY xsd      "http://www.w3.org/2001/XMLSchema#"> ]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://TD.rdfs/"
+	xmlns:lang="http://purl.org/net/inkel/rdf/schemas/lang/1.1#"
+	xmlns:doac="http://lironesamoun.fr/"
+	xmlns:po="http://www.polytechnice.fr/"
+	xmlns:xsd ="&xsd;"
+	xmlns:base="http://www.TP1WebDonnees.fr/">
+
+
+<foaf:Person rdf:ID="LironeSamoun">
+	
+	<dc:hasCV>
+		<rdf:Description rdf:about="#CVLirone"/>
+	</dc:hasCV>
+	   <dc:hasCoordonnee>
+         <rdf:Description rdf:about="#CoordonneesCVLirone"/>
+      </dc:hasCoordonnee>
+	<foaf:Age rdf:nodeID="age"/>
+      <foaf:Adresse rdf:nodeID="addrLirone"/>
+      <dc:teached>
+         <rdf:Description rdf:about="#CoursADomicileLirone"/>
+      </dc:teached>
+      <dc:formation>
+         <rdf:Description rdf:about="#FormationContentCVLirone"/>
+      </dc:formation>
+ </foaf:Person>
+   
+	
+<rdf:Description rdf:about="#CVLirone">
+      <rdf:type rdf:resource="CV"/>
+		<dc:hasPart>
+			 <rdf:Description rdf:about="#CoordonneesCVLirone">
+			      <rdf:type rdf:resource="PartCV"/>
+				   <dc:hasName rdf:datatype="&xsd;string">Coordonnees
+				   </dc:hasName>
+				   <dc:hasContent>
+					  <rdf:Description rdf:about="#CoordonneesContentCVLirone"/>
+				   </dc:hasContent>
+				</rdf:Description>
+		</dc:hasPart>
+   
+		<dc:hasPart>
+
+		  
+			 <rdf:Description rdf:about="#FormationCVLirone">
+			      <rdf:type rdf:resource="PartCV"/>
+				   <dc:hasName rdf:datatype="&xsd;string">Formation
+				   </dc:hasName>
+				   <dc:hasContent>
+					  <rdf:Description rdf:about="#FormationContentCVLirone"/>
+				   </dc:hasContent>
+			 </rdf:Description>
+    	</dc:hasPart>
+
+        <dc:hasPart>
+         <rdf:Description rdf:about="#ExperienceCVLirone">
+               <rdf:type rdf:resource="PartCV"/>
+               <dc:hasName rdf:datatype="&xsd;string">Experience
+               </dc:hasName>
+               <dc:hasContent>
+                  <rdf:Description rdf:about="#ExperienceContentCVLirone"/>
+               </dc:hasContent>
+            </rdf:Description>
+      </dc:hasPart>
+
+	 
+	 
+	     <dc:hasPart>
+			 <rdf:Description rdf:about="#CompetencesCVLirone">
+			      <rdf:type rdf:resource="PartCV"/>
+				   <dc:hasName rdf:datatype="&xsd;string">Competences
+				   </dc:hasName>
+				   <dc:hasContent>
+					  <rdf:Description rdf:about="#CompetencesContentCVLirone"/>
+				   </dc:hasContent>
+				</rdf:Description>
+		
+     </dc:hasPart>
+
+      <dc:hasPart>
+         <rdf:Description rdf:about="#ExperienceCVLirone">
+               <rdf:type rdf:resource="PartCV"/>
+               <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experiences
+               </dc:hasName>
+               <dc:hasContent>
+                  <rdf:Description rdf:about="#ExperienceContentCVLirone"/>
+               </dc:hasContent>
+            </rdf:Description>
+      </dc:hasPart>
+   
+   
+    </rdf:Description>
+	
+	
+	
+      <rdf:Description rdf:about="#CoordonneesContentCVLirone">
+         <rdf:type rdf:resource="ContentCV"/>
+			<foaf:name rdf:datatype="&xsd;string" >Coordonnées</foaf:name>
+		
+
+			<foaf:givenname>Lirone</foaf:givenname>
+			<foaf:family_name>SAMOUN</foaf:family_name>
+			<foaf:dateOfBirth>1992-10-25</foaf:dateOfBirth>
+			<foaf:mbox rdf:resource="lirone.samoun@gmail.com"/>
+			<foaf:age rdf:nodeID="age" />
+			<foaf:adresse rdf:nodeID="addrLirone" />
+			<foaf:homepage rdf:resource="http://lironesamoun.fr" dc:title="Page de photographies"/>
+			<foaf:weblog rdf:resource="http://revolutionpositive.fr" dc:title="Blog Développement personnel"/>
+			<foaf:gender rdf:datatype="&xsd;string">male</foaf:gender>
+			<foaf:phone rdf:datatype="&xsd;integer" >33675769816</foaf:phone>
+	  </rdf:Description>
+
+	
+	<rdf:Description rdf:about="#FormationContentCVLirone">
+	   <rdf:type rdf:resource="ContentCV"/>
+		<dc:hasItem>
+			<rdf:Description rdf:about="#Annee5ingenieurLirone">
+			   <rdf:type rdf:resource="Formation"/>
+				<dc:hasName  rdf:datatype="&xsd;string" >Cycle Ingénieur</dc:hasName>
+					<dc:hasEtablissement>
+						<rdf:Description rdf:about="#Polytech"/>
+					</dc:hasEtablissement>
+					<dc:date-starts rdf:datatype="&xsd;date" >2014-06-23</dc:date-starts>
+					<dc:date-ends rdf:datatype="&xsd;date" >2015-06-24</dc:date-ends>
+					<dc:hasFilliere>
+						<rdf:Description rdf:about="#MAM">
+							<dc:hasName  rdf:datatype="&xsd;string" >
+								Mathématique Appliquées et Modélisation
+							</dc:hasName>
+							<dc:option>
+								<rdf:Description rdf:about="#GMD"/>
+							</dc:option>
+						</rdf:Description>
+					</dc:hasFilliere>
+			</rdf:Description>
+		</dc:hasItem>
+
+		 <dc:hasItem>
+         	<rdf:Description rdf:about="#Annee3Annee4ingenieurLirone">
+         	   <rdf:type rdf:resource="Formation"/>
+            	<dc:hasName  rdf:datatype="&xsd;string" >Cycle Ingénieur</dc:hasName>
+					<dc:hasEtablissement>
+						<rdf:Description rdf:about="#Polytech" />
+					</dc:hasEtablissement>
+            	<dc:date-start rdf:datatype="&xsd;date">
+               2012-06-23
+            	</dc:date-start>
+            	<dc:date-ends rdf:datatype="&xsd;date">
+              	 2014-06-24
+            	</dc:date-ends>
+            	<dc:hasFiliere>
+               		<rdf:Description rdf:about="#MAM"/>
+             	</dc:hasFiliere>
+           
+         	</rdf:Description>
+      </dc:hasItem>
+		
+		<dc:hasItem>
+			<rdf:Description rdf:about="#cip">
+			   <rdf:type rdf:resource="Formation"/>
+				<dc:hasEtablissement>
+					<rdf:Description rdf:about="#Polytech"/>
+				</dc:hasEtablissement>
+				<dc:date-starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >2010-09-01</dc:date-starts>
+				<dc:date-ends rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >2012-06-30</dc:date-ends>
+			</rdf:Description>
+		</dc:hasItem>
+		
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="#ExperienceContentCVLirone">
+	   <rdf:type rdf:resource="ContentCV"/>
+		<dc:hasItem>
+         <rdf:Description rdf:about="#Stage">
+            <rdf:type rdf:resource="Experience"/>
+            <dc:lieu>
+               <rdf:Description rdf:about="#Madrid">
+                  <rdf:type rdf:resource="Ville"/>
+                  <dc:hasPays>
+                     <rdf:Description rdf:about="#Espagne">
+                        <rdf:type rdf:resource="Pays"/>
+                     </rdf:Description>
+                  </dc:hasPays>
+               </rdf:Description>
+            </dc:lieu>
+            <dc:date-start rdf:datatype="&xsd;string">
+               2014-06-25
+            </dc:date-start>
+            <dc:date-ends rdf:datatype="&xsd;string">
+               2014-09-08
+            </dc:date-ends>
+         </rdf:Description>
+      </dc:hasItem>
+      
+      <dc:hasItem>
+         <rdf:Description rdf:about="#CoursADomicileLirone">
+            <rdf:type rdf:resource="Experience"/>
+            <dc:lieu>
+               <rdf:Description rdf:about="#Antibes">
+                  <rdf:type rdf:resource="Ville"/>
+                  <dc:hasPays>
+                     <rdf:Description rdf:about="#France"/>
+                  </dc:hasPays>
+               </rdf:Description>
+            </dc:lieu>
+            <dc:date-start rdf:datatype="&xsd;string">
+               2010-06-23
+            </dc:date-start>
+            <dc:date-ends rdf:datatype="&xsd;string">
+               2014-06-24
+            </dc:date-ends>
+            <dc:niveau>
+               <rdf:Description rdf:about="#Lycée"/>
+            </dc:niveau>
+            <dc:niveau>
+               <rdf:Description rdf:about="#College"/>
+            </dc:niveau>
+         </rdf:Description>
+      </dc:hasItem>
+   </rdf:Description>
+
+
+   
+     <rdf:Description rdf:about="#CompetencesContentCVLirone">
+      <rdf:type rdf:resource="ContentCV"/>
+      <dc:hasOS>
+         <rdf:Description rdf:about="#linux">
+            <rdf:type rdf:resource="OS"/>
+               <dc:hasName rdf:datatype="&xsd;string" >Linux</dc:hasName>
+         </rdf:Description>
+      </dc:hasOS>
+      <dc:hasOS>
+         <rdf:Description rdf:about="#windows">
+            <rdf:type rdf:resource="OS"/>
+               <dc:hasName rdf:datatype="&xsd;string" >Windows</dc:hasName>
+         </rdf:Description>
+      </dc:hasOS>  
+      
+      <dc:hasLangue>
+            <rdf:Description rdf:about="#Anglais">
+               <rdf:type rdf:resource="Langue"/>
+               <dc:hasName rdf:datatype="&xsd;string" >Anglais</dc:hasName>
+            </rdf:Description>
+      </dc:hasLangue>
+      <dc:hasLangue>
+            <rdf:Description rdf:about="#Espagnol">
+               <rdf:type rdf:resource="Langue"/>
+               <dc:hasName rdf:datatype="&xsd;string" >Espagnol</dc:hasName>
+            </rdf:Description>
+      </dc:hasLangue>
+         
+      <dc:ProgrammationWeb>
+               <rdf:Description rdf:about="#HTML">
+                  <rdf:type rdf:resource="Language"/>
+                  <dc:hasName rdf:datatype="&xsd;string" >HTML</dc:hasName>
+               </rdf:Description>
+      </dc:ProgrammationWeb>
+      <dc:ProgrammationWeb>
+               <rdf:Description rdf:about="#CSS">
+                  <rdf:type rdf:resource="Language"/>
+                  <dc:hasName rdf:datatype="&xsd;string"  >CSS</dc:hasName>
+               </rdf:Description>
+      </dc:ProgrammationWeb>
+      <dc:ProgrammationWeb>
+               <rdf:Description rdf:about="#JavaScript">
+                  <rdf:type rdf:resource="Language"/>
+                  <dc:hasName rdf:datatype="&xsd;string" >JavaScript</dc:hasName>
+               </rdf:Description>
+      </dc:ProgrammationWeb>
+         
+         
+      <dc:ProgrammationDev>
+               <rdf:Description rdf:about="#Java">
+                  <rdf:type rdf:resource="Language"/>
+               <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Java</dc:hasName>
+               </rdf:Description>
+      </dc:ProgrammationDev>
+      <dc:ProgrammationDev>
+               <rdf:Description rdf:about="#C++">
+                  <rdf:type rdf:resource="Language"/>
+                  <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >C++</dc:hasName>
+               </rdf:Description>
+      </dc:ProgrammationDev>
+      <dc:ProgrammationDev>
+               <rdf:Description rdf:about="#MatLab">
+                  <rdf:type rdf:resource="Language"/>
+                  <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >MatLab</dc:hasName>
+               </rdf:Description>
+      </dc:ProgrammationDev>
+      
+   
+   </rdf:Description>
+
+
+
+		<rdf:Description rdf:nodeID="age">
+			<rdf:value rdf:datatype="&xsd;integer" >
+				 22
+			</rdf:value>
+			<dc:unit rdf:resource="#annee" />
+		</rdf:Description>
+
+
+			<rdf:Description rdf:nodeID="addrLirone">
+				<dc:numero rdf:datatype="&xsd;integer" > 
+					589
+				</dc:numero>
+				<dc:rue rdf:datatype="&xsd;string" > 
+					Chemins des hautes bréguières
+				</dc:rue>
+				<dc:CP rdf:datatype="&xsd;integer" > 
+					06600
+				</dc:CP>
+				<dc:Ville>
+					<rdf:Description rdf:about="#Antibes">
+					   <rdf:type rdf:resource="Ville"/>
+						<dc:hasName rdf:datatype="&xsd;string" >
+							Antibes
+						</dc:hasName>
+						
+						<dc:Pays>
+							<rdf:Description rdf:about="#France">
+							   <rdf:type rdf:resource="Pays"/>
+								<dc:hasName rdf:datatype="&xsd;string">
+									France
+								</dc:hasName>
+							</rdf:Description>
+						</dc:Pays>
+					</rdf:Description>
+				</dc:Ville>
+		</rdf:Description>
+		
+
+   
+		
+		<foaf:Person rdf:about="#Geneviève">
+      <dc:hasCV>
+         <rdf:Description rdf:about="#CVGenevieve"/>
+      </dc:hasCV>
+      <dc:hasCoordonnee>
+         <rdf:Description rdf:about="#CoordonneesCVGenevieve"/>
+      </dc:hasCoordonnee>
+      <foaf:Age rdf:nodeID="age"/>
+      <foaf:Adresse rdf:nodeID="addrGenevieve"/>
+      <dc:teached>
+         <rdf:Description rdf:about="#CoursADomicileGenevieve"/>
+      </dc:teached>
+      <dc:formation>
+         <rdf:Description rdf:about="#FormationContentCVGenevieve"/>
+      </dc:formation>
+   </foaf:Person>
+   
+   
+   <rdf:Description rdf:about="#CVGenevieve">
+      <rdf:type rdf:resource="#CV"/>
+      <dc:hasPart>
+         <rdf:Description rdf:about="#CoordonneesCVGenevieve">
+            <rdf:type rdf:resource="#PartCV"/>
+               <dc:hasName rdf:datatype="&xsd;string">Coordonnees
+               </dc:hasName>
+               <dc:hasContent>
+                  <rdf:Description rdf:about="#CoordonneesContentCVGenevieve"/>
+               </dc:hasContent>
+            </rdf:Description>
+      </dc:hasPart>
+      
+      <dc:hasPart>
+         <rdf:Description rdf:about="#FormationCVGenevieve">
+            <rdf:type rdf:resource="#PartCV"/>
+               <dc:hasName rdf:datatype="&xsd;string">Formation
+               </dc:hasName>
+               <dc:hasContent>
+                  <rdf:Description rdf:about="#FormationContentCVGenevieve"/>
+               </dc:hasContent>
+            </rdf:Description>
+      </dc:hasPart>
+      
+      <dc:hasPart>
+         <rdf:Description rdf:about="#ExperienceCVGenevieve">
+            <rdf:type rdf:resource="#PartCV"/>
+               <dc:hasName rdf:datatype="&xsd;string">Experience
+               </dc:hasName>
+               <dc:hasContent>
+                  <rdf:Description rdf:about="#ExperienceContentCVGenevieve"/>
+               </dc:hasContent>
+            </rdf:Description>
+      </dc:hasPart>
+
+      <dc:hasPart>
+          <rdf:Description rdf:about="#CompetencesCVGenevieve">
+            <rdf:type rdf:resource="#PartCV"/>
+               <dc:hasName rdf:datatype="&xsd;string">Competences
+               </dc:hasName>
+               <dc:hasContent>
+                 <rdf:Description rdf:about="#CompetencesContentCVGenevieve"/>
+               </dc:hasContent>
+            </rdf:Description>
+      
+     </dc:hasPart>
+   </rdf:Description>
+   
+   
+   
+   <rdf:Description rdf:about="#CoordonneesContentCVGenevieve">
+      <rdf:type rdf:resource="#ContentCV"/>
+      <foaf:Name rdf:datatype="&xsd;string">Coordonnées
+      </foaf:Name> 
+      <foaf:givenname>Genevieve</foaf:givenname>
+			<foaf:family_name>CIRERA</foaf:family_name>
+			<foaf:dateOfBirth>1992-02-19</foaf:dateOfBirth>
+      <foaf:Age rdf:nodeID="age"/>
+      <foaf:Adresse rdf:nodeID="addrGenevieve"/>
+      <foaf:mbox rdf:resource="genevieve.cirera@gmail.com"/>
+      <foaf:phone rdf:datatype="&xsd;integer">
+         0600000000
+      </foaf:phone>
+      <foaf:gender rdf:datatype="&xsd;string">Female</foaf:gender>
+   </rdf:Description>
+   
+   <rdf:Description rdf:about="#FormationContentCVGenevieve">
+      <rdf:type rdf:resource="#ContentCV"/>
+      <dc:hasItem>
+         <rdf:Description rdf:about="#Annee5ingenieurGenevieve">
+            <rdf:type rdf:resource="Formation"/>
+            <dc:etablissement>
+                  <rdf:Description rdf:about="Polytech"/>
+               </dc:etablissement>
+            <dc:hasName  rdf:datatype="&xsd;string" >Cycle Ingénieur</dc:hasName>
+            <dc:date-start rdf:datatype="&xsd;date">
+               2014-06-23
+            </dc:date-start>
+            <dc:date-ends rdf:datatype="&xsd;date">
+               2015-06-24
+            </dc:date-ends>
+            <dc:hasFiliere>
+               <rdf:Description rdf:about="#SI"/>
+             </dc:hasFiliere>
+            <dc:hasOption>
+               <rdf:Description rdf:about="#WEB"/>
+            </dc:hasOption>
+           
+         </rdf:Description>
+      </dc:hasItem>
+      
+      <dc:hasItem>
+         <rdf:Description rdf:about="#Annee3Annee4ingenieurGenevieve">
+            <rdf:type rdf:resource="Formation"/>
+            <dc:date-start rdf:datatype="&xsd;date">
+               2012-06-23
+            </dc:date-start>
+            <dc:date-ends rdf:datatype="&xsd;date">
+               2014-06-24
+            </dc:date-ends>
+            <dc:hasFiliere>
+               <rdf:Description rdf:about="#SI"/>
+             </dc:hasFiliere>
+           
+         </rdf:Description>
+      </dc:hasItem>
+      
+      <dc:hasItem>
+         <rdf:Description rdf:about="#Prepa">
+            <rdf:type rdf:resource="Formation"/>
+            <dc:hasEtablissement>
+               <rdf:Description rdf:about="#ESILV">
+                  <rdf:type rdf:resource="Etablissement"/>
+               </rdf:Description>
+            </dc:hasEtablissement>
+            <dc:date-start rdf:datatype="&xsd;date">
+               2010-06-23
+            </dc:date-start>
+            <dc:date-ends rdf:datatype="&xsd;date">
+               2012-06-24
+            </dc:date-ends>
+         </rdf:Description>
+      </dc:hasItem>
+   </rdf:Description>
+   
+   <rdf:Description rdf:about="#ExperienceContentCVGenevieve">
+      <rdf:type rdf:resource="#ContentCV"/>
+      <dc:hasItem>
+         <rdf:Description rdf:about="#CoursADomicileGenevieve">
+            <rdf:type rdf:resource="Experience"/>
+            <dc:lieu>
+               <rdf:Description rdf:about="#Paris">
+                  <rdf:type rdf:resource="Ville"/>
+                  <dc:hasPays>
+                     <rdf:Description rdf:about="#France">
+                        <rdf:type rdf:resource="Pays"/>
+                     </rdf:Description>
+                  </dc:hasPays>
+               </rdf:Description>
+            </dc:lieu>
+            <dc:date-start rdf:datatype="&xsd;string">
+               2010-06-23
+            </dc:date-start>
+            <dc:date-ends rdf:datatype="&xsd;string">
+               2012-06-24
+            </dc:date-ends>
+            <dc:niveau>
+               <rdf:Description rdf:about="#Lycée"/>
+            </dc:niveau>
+            <dc:niveau>
+               <rdf:Description rdf:about="#College"/>
+            </dc:niveau>
+         </rdf:Description>
+      </dc:hasItem>
+   </rdf:Description>
+
+
+   <rdf:Description rdf:about="CompetencesContentCVGenevieve">
+      <rdf:type rdf:resource="#ContentCV"/>
+      <dc:hasOS>
+         <rdf:Description rdf:about="#linux" />
+      </dc:hasOS>
+      <dc:hasOS>
+         <rdf:Description rdf:about="#windows" />
+      </dc:hasOS>  
+      
+      <dc:hasLangue>
+            <rdf:Description rdf:about="#Anglais" />
+      </dc:hasLangue>
+      <dc:hasLangue>
+            <rdf:Description rdf:about="#Espagnol" />
+      </dc:hasLangue>
+         
+      <dc:ProgrammationWeb>
+               <rdf:Description rdf:about="#HTML" />
+      </dc:ProgrammationWeb>
+      <dc:ProgrammationWeb>
+               <rdf:Description rdf:about="#CSS" />
+      </dc:ProgrammationWeb>
+      <dc:ProgrammationWeb>
+               <rdf:Description rdf:about="#JavaScript" />
+      </dc:ProgrammationWeb>
+         
+         
+      <dc:ProgrammationDev>
+               <rdf:Description rdf:about="#Java" />
+      </dc:ProgrammationDev>
+      <dc:ProgrammationDev>
+               <rdf:Description rdf:about="#C++" />
+      </dc:ProgrammationDev>
+      <dc:ProgrammationDev>
+               <rdf:Description rdf:about="#MatLab" />
+      </dc:ProgrammationDev>
+      
+   
+   </rdf:Description>
+   
+   <rdf:Description rdf:nodeID="addrGenevieve">
+      <dc:numero rdf:datatype="&xsd;integer">
+         22
+      </dc:numero>
+      <dc:rue rdf:datatype="&xsd;string">
+         zefrerg
+      </dc:rue>
+      <dc:CP rdf:datatype="&xsd;integer">
+         06560
+      </dc:CP>
+      <dc:Ville>
+         <rdf:Description rdf:about="#Valbonne">
+         <rdf:type rdf:resource="Ville"/>
+         <dc:hasName rdf:datatype="&xsd;string">Valbonne
+         </dc:hasName>
+         <dc:hasPays>
+            <rdf:Description rdf:about="#France">
+               <dc:hasName rdf:datatype="&xsd;string">France
+               </dc:hasName>
+            </rdf:Description>
+         </dc:hasPays>
+      </rdf:Description>
+      </dc:Ville>
+   </rdf:Description>
+</rdf:RDF>

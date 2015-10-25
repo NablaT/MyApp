@@ -1,0 +1,85 @@
+@prefix dc: <http://TD.rdfs/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix po: <http://www.polytechnice.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdfs:Polytech a dc:Ecole,
+        <http://www.w3.org/2000/01/Etablissement> ;
+    dc:hasPhase rdfs:CycleIngenieur,
+        rdfs:CyclePreparatoire .
+
+rdfs:AL a <http://www.w3.org/2000/01/option> ;
+    dc:hasName """
+                           AL
+                        """^^xsd:string.
+
+rdfs:CASPAR a <http://www.w3.org/2000/01/option> ;
+    dc:hasName """
+                           CASPAR
+                        """^^xsd:string.
+
+rdfs:CycleIngenieur a <http://www.w3.org/2000/01/phase> ;
+    dc:hasFiliere rdfs:MAM,
+        rdfs:SI ;
+    dc:hasName """
+               Cycle Ingénieur
+            """^^xsd:string.
+
+rdfs:CyclePreparatoire a <http://www.w3.org/2000/01/phase> ;
+    dc:hasName """
+               Cycle Preparatoire
+            """^^xsd:string.
+
+rdfs:IAM a <http://www.w3.org/2000/01/option> ;
+    dc:hasName """
+                           IAM
+                        """^^xsd:string.
+
+rdfs:IHM a <http://www.w3.org/2000/01/option> ;
+    dc:hasName """
+                           IHM
+                        """^^xsd:string.
+
+rdfs:INUM dc:hasName """
+                           INUM
+                        """^^xsd:string.
+
+rdfs:MAM a <http://www.w3.org/2000/01/Filiere> ;
+    dc:hasName """
+                        MAM
+                     """^^xsd:string;
+    dc:hasOption rdfs:GMD,
+        rdfs:IMAFA,
+        rdfs:INUM .
+
+rdfs:SI a <http://www.w3.org/2000/01/Filiere> ;
+    dc:hasName """
+                     SI
+                  """^^xsd:string;
+    dc:hasOption rdfs:AL,
+        rdfs:CASPAR,
+        rdfs:GMD,
+        rdfs:IAM,
+        rdfs:IHM,
+        rdfs:IMAFA,
+        rdfs:WEB .
+
+rdfs:WEB a <http://www.w3.org/2000/01/option> ;
+    dc:hasName """
+                           WEB
+                        """^^xsd:string.
+
+rdfs:GMD a <http://www.w3.org/2000/01/option> ;
+    dc:name """
+         GMD
+      """^^xsd:string.
+
+rdfs:IMAFA a <http://www.w3.org/2000/01/option> ;
+    dc:name """
+         IMAFA
+      """^^xsd:string.
+
+

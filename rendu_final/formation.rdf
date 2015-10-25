@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://TD.rdfs/"
+  xmlns:po="http://www.polytechnice.fr/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xml:base="http://www.w3.org/2000/01/rdf-schema#">
+  
+   <dc:Ecole rdf:about="#Polytech">
+      <rdf:type rdf:resource="Etablissement"/>
+      <dc:hasPhase>
+         <rdf:Description rdf:about="#CyclePreparatoire">
+            <rdf:type rdf:resource="phase"/>
+            <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               Cycle Preparatoire
+            </dc:hasName>
+         </rdf:Description>
+      </dc:hasPhase>
+      
+      <dc:hasPhase>
+         <rdf:Description rdf:about="#CycleIngenieur">
+            <rdf:type rdf:resource="phase"/>
+            <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               Cycle Ingénieur
+            </dc:hasName>
+            <dc:hasFiliere >
+               <rdf:Description rdf:about="#SI">
+                  <rdf:type rdf:resource="Filiere"/>
+                  <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                     SI
+                  </dc:hasName>
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#WEB">
+                        <rdf:type rdf:resource="option"/>
+                        <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                           WEB
+                        </dc:hasName>
+                        
+                     </rdf:Description>
+                  </dc:hasOption>
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#AL">
+                        <rdf:type rdf:resource="option"/>
+                        <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                           AL
+                        </dc:hasName>
+                     </rdf:Description>
+                  </dc:hasOption>
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#CASPAR">
+                        <rdf:type rdf:resource="option"/>
+                        <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                           CASPAR
+                        </dc:hasName>
+                     </rdf:Description>
+                  </dc:hasOption>
+                  
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#IAM">
+                        <rdf:type rdf:resource="option"/>
+                        <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                           IAM
+                        </dc:hasName>
+                     </rdf:Description>
+                  </dc:hasOption>
+                  
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#IHM">
+                        <rdf:type rdf:resource="option"/>
+                        <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                           IHM
+                        </dc:hasName>
+                     </rdf:Description>
+                  </dc:hasOption>
+                  
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#GMD"/>
+                  </dc:hasOption>
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#IMAFA"/>
+                  </dc:hasOption>
+                  
+               </rdf:Description>
+            </dc:hasFiliere>
+            <dc:hasFiliere>
+               <rdf:Description rdf:about="#MAM">
+                  <rdf:type rdf:resource="Filiere"/>
+                     <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                        MAM
+                     </dc:hasName>
+                     <dc:hasOption>
+                     <rdf:Description rdf:about="#GMD"/>
+                  </dc:hasOption>
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#IMAFA"/>
+                  </dc:hasOption>
+                  <dc:hasOption>
+                     <rdf:Description rdf:about="#INUM">
+                        <dc:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                           INUM
+                        </dc:hasName>
+                     </rdf:Description>
+                  </dc:hasOption>
+                  
+                  </rdf:Description>
+            </dc:hasFiliere>
+         </rdf:Description>
+      </dc:hasPhase>
+   </dc:Ecole>
+   
+   
+
+   <rdf:Description rdf:about="#GMD">
+      <rdf:type rdf:resource="option"/>
+      <dc:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+         GMD
+      </dc:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IMAFA">
+      <rdf:type rdf:resource="option"/>
+      <dc:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+         IMAFA
+      </dc:name>
+   </rdf:Description>
+   
+</rdf:RDF>
